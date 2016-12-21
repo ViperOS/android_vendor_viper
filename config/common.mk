@@ -92,6 +92,14 @@ endif
 PRODUCT_PACKAGES += \
     bootanimation.zip
 
+# PixelLauncher
+PRODUCT_COPY_FILES += \
+    vendor/viper/prebuilt/common/apk/PixelLauncher/PixelLauncher.apk:system/priv-app/PixelLauncher/PixelLauncher.apk
+	
+# GoogleWallpaperPicker
+PRODUCT_COPY_FILES += \
+    vendor/viper/prebuilt/common/apk/GoogleWallpaperPicker/GoogleWallpaperPicker.apk:system/app/GoogleWallpaperPicker/GoogleWallpaperPicker.apk
+	
 # Required VIPER packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
@@ -124,7 +132,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     LockClock \
-    Trebuchet \
     WallpaperPicker \
     WeatherProvider
 
