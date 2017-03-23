@@ -38,9 +38,10 @@ PRODUCT_COPY_FILES += \
     vendor/viper/prebuilt/common/bin/50-viper.sh:system/addon.d/50-viper.sh \
     vendor/viper/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
-# Backup Services whitelist
+# System feature whitelists
 PRODUCT_COPY_FILES += \
-    vendor/viper/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/viper/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
+    vendor/viper/config/permissions/power-whitelist.xml:system/etc/sysconfig/power-whitelist.xml
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
