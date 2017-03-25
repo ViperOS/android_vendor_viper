@@ -40,10 +40,10 @@ function breakfast()
 {
     target=$1
     local variant=$2
-    CM_DEVICES_ONLY="true"
+    VIPER_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-    for f in `/bin/ls vendor/cm/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/viper.vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -64,11 +64,11 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            if ! check_product lineage_$target && check_product cm_$target; then
+            if ! check_product viper_$target && check_product viper_$target; then
                 echo "** Warning: '$target' is using CM-based makefiles. This will be deprecated in the next major release."
-                lunch cm_$target-$variant
+                lunch viper_$target-$variant
             else
-                lunch lineage_$target-$variant
+                lunch viper_$target-$variant
             fi
         fi
     fi
@@ -80,8 +80,8 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        MODVERSION=$(get_build_var LINEAGE_VERSION)
-        ZIPFILE=lineage-$MODVERSION.zip
+        MODVERSION=$(get_build_var VIPER_VERSION)
+        ZIPFILE=viper-$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
@@ -96,7 +96,7 @@ function eat()
             done
             echo "Device Found.."
         fi
-        if (adb shell getprop ro.cm.device | grep -q "$CM_BUILD"); then
+        if (adb shell getprop ro.viper.device | grep -q "$VIPER_BUILD"); then
             # if adbd isn't root we can't write to /cache/recovery/
             adb root
             sleep 1
@@ -112,7 +112,7 @@ EOF
             fi
             rm /tmp/command
         else
-            echo "The connected device does not appear to be $CM_BUILD, run away!"
+            echo "The connected device does not appear to be $VIPER_BUILD, run away!"
         fi
         return $?
     else
@@ -319,7 +319,7 @@ function installboot()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 > /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.cm.device | grep -q "$CM_BUILD");
+    if (adb shell getprop ro.viper.device | grep -q "$VIPER_BUILD");
     then
         adb push $OUT/boot.img /cache/
         for i in $OUT/system/lib/modules/*;
@@ -330,7 +330,7 @@ function installboot()
         adb shell chmod 644 /system/lib/modules/*
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $CM_BUILD, run away!"
+        echo "The connected device does not appear to be $VIPER_BUILD, run away!"
     fi
 }
 
@@ -364,13 +364,13 @@ function installrecovery()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 >> /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.cm.device | grep -q "$CM_BUILD");
+    if (adb shell getprop ro.viper.device | grep -q "$VIPER_BUILD");
     then
         adb push $OUT/recovery.img /cache/
         adb shell dd if=/cache/recovery.img of=$PARTITION
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $CM_BUILD, run away!"
+        echo "The connected device does not appear to be $VIPER_BUILD, run away!"
     fi
 }
 
@@ -791,7 +791,7 @@ function dopush()
         echo "Device Found."
     fi
 
-    if (adb shell getprop ro.cm.device | grep -q "$CM_BUILD") || [ "$FORCE_PUSH" = "true" ];
+    if (adb shell getprop ro.viper.device | grep -q "$VIPER_BUILD") || [ "$FORCE_PUSH" = "true" ];
     then
     # retrieve IP and PORT info if we're using a TCP connection
     TCPIPPORT=$(adb devices \
@@ -909,7 +909,7 @@ EOF
     rm -f $OUT/.log
     return 0
     else
-        echo "The connected device does not appear to be $CM_BUILD, run away!"
+        echo "The connected device does not appear to be $VIPER_BUILD, run away!"
     fi
 }
 
@@ -922,13 +922,13 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/cm/build/tools/repopick.py $@
+    $T/vendor/viper.build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
     common_out_dir=$(get_build_var OUT_DIR)/target/common
     target_device=$(get_build_var TARGET_DEVICE)
-    if [ ! -z $CM_FIXUP_COMMON_OUT ]; then
+    if [ ! -z $VIPER_FIXUP_COMMON_OUT ]; then
         if [ -d ${common_out_dir} ] && [ ! -L ${common_out_dir} ]; then
             mv ${common_out_dir} ${common_out_dir}-${target_device}
             ln -s ${common_out_dir}-${target_device} ${common_out_dir}

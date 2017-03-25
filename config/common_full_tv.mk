@@ -1,4 +1,4 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common_full.mk)
+# Inherit common VIPER stuff
+$(call inherit-product, vendor/viper/config/common_full.mk)
 
 PRODUCT_PACKAGES += TvSettings

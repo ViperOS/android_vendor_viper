@@ -1,5 +1,5 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common VIPER stuff
+$(call inherit-product, vendor/viper/config/common.mk)
 
 PRODUCT_SIZE := full
 

@@ -1,50 +1,38 @@
-LineageOS
-===========
+ViperOs Project
+===============
 
-Submitting Patches
-------------------
-Patches are always welcome!  Please submit your patches via LineageOS Gerrit!
-You can do this by using these commands:
+![ViperOS](http://i.imgur.com/bwSVDSV.png)
 
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id> 
+Download the Source
+===================
 
-    repo start cm-14.1 .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
+Please read the [AOSP building instructions](http://source.android.com/source/index.html) before proceeding.
 
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
+Initializing Repository
+-----------------------
 
-To view the status of your and others' patches, visit [LineageOS Code Review](http://review.lineageos.org/)
+Initiate core trees without any device/kernel/vendor:
 
-
-Getting Started
----------------
-
-To get started with Android/LineageOS, you'll need to get
-familiar with [Repo](https://source.android.com/source/using-repo.html) and [Version Control with Git](https://source.android.com/source/version-control.html).
-
-To initialize your local repository using the LineageOS trees, use a command like this:
-
-    repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+    repo init -u https://github.com/Viper0S/viper_manifest.git -b n-mr1
 
 Then to sync up:
 
-    repo sync
+    repo sync -c -f -j8 --force-sync --no-clone-bundle --no-tags
 
-Please see the [LineageOS Wiki](http://wiki.lineageos.org/) for building instructions, by device.
+*** 
 
-For more information on this Github Organization and how it is structured, 
-please [read the wiki article](http://wiki.lineageos.org/w/Github_Organization)
+Building 
+-------- 
 
-Buildbot
---------
+After the sync is finished, please read the [instructions from the Android site](http://s.android.com/source/building.html) on 
+how to build.
 
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
+    . build/envsetup.sh
 
-You can view the current build statuses in the [Jenkins](http://jenkins.lineageos.org) tool.
+    lunch You can also build for specific devices (eg. hammerhead) like this:
+
+    . build/envsetup.sh
+    lunch viper_hammerhead-userdebug
+    mka poison
+
+Remember to `make clobber && make clean` every now and then!
