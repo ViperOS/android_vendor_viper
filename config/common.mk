@@ -216,8 +216,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rsync
 
-ifeq ($(DEFAULT_ROOT_METHOD),magisk)
-# Magisk Manager
+ifeq ($(DEFAULT_ROOT_METHOD),rootless)
+else
+# Magisk Manager --> default root method
 PRODUCT_PACKAGES += \
     MagiskManager
 
