@@ -92,6 +92,9 @@ endif
 PRODUCT_PACKAGES += \
     bootanimation.zip
 
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.opa.eligible_device=true
+	
 # PixelLauncher
 PRODUCT_COPY_FILES += \
     vendor/viper/prebuilt/common/apk/PixelLauncher/PixelLauncher.apk:system/priv-app/PixelLauncher/PixelLauncher.apk
