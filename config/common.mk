@@ -93,6 +93,9 @@ PRODUCT_PACKAGES += \
     bootanimation.zip
 
 PRODUCT_PROPERTY_OVERRIDES := \
+    ro.com.google.ime.theme_id=5
+
+PRODUCT_PROPERTY_OVERRIDES := \
     ro.opa.eligible_device=true
 	
 # PixelLauncher
