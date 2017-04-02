@@ -142,6 +142,11 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider
 
+# Omni packages
+PRODUCT_PACKAGES += \
+    OmniStyle \
+    OmniJaws
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
