@@ -106,6 +106,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/viper/prebuilt/common/apk/GoogleWallpaperPicker/GoogleWallpaperPicker.apk:system/app/GoogleWallpaperPicker/GoogleWallpaperPicker.apk
 	
+# Turbo
+PRODUCT_COPY_FILES += \
+    vendor/viper/prebuilt/common/apk/Turbo/Turbo.apk:system/priv-app/Turbo/Turbo.apk
+	
 # Required VIPER packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
