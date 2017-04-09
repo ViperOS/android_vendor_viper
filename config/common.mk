@@ -230,6 +230,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.storage_manager.enabled=true
 
+# Dex optimization not required
+WITH_DEXPREOPT := false
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext
