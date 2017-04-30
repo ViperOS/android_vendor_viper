@@ -85,6 +85,12 @@ ifneq ($(TARGET_DISABLE_CMSDK), true)
 include vendor/viper/config/cmsdk_common.mk
 endif
 
+ifneq ($(TARGET_NO_DSPMANAGER), true)
+PRODUCT_PACKAGES += \
+    libcyanogen-dsp \
+    audio_effects.conf
+endif
+
 # Bootanimation
 PRODUCT_PACKAGES += \
     bootanimation.zip
