@@ -144,7 +144,8 @@ PRODUCT_PACKAGES += \
     ViperOTA \
     libbypass \
     WallpaperPicker \
-    WeatherProvider
+    WeatherProvider \
+    ViaBrowser
 
 # Omni packages
 PRODUCT_PACKAGES += \
