@@ -138,12 +138,13 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     CMUpdater \
     CustomTiles \
-    LineageSetupWizard \
     Eleven \
     ExactCalculator \
+    LineageSetupWizard \
     LiveLockScreenService \
     LockClock \
     ThemeInterfacer \
+    ViperOTA \
     WallpaperPicker \
     WeatherProvider
 
