@@ -144,7 +144,7 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     LockClock \
     ThemeInterfacer \
-    ViperOTA \
+    OTAUpdates \
     WallpaperPicker \
     WeatherProvider
 
