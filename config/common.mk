@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
     CustomTiles \
     Eleven \
     ExactCalculator \
+    Jelly \
     LineageSetupWizard \
     LiveLockScreenService \
     LockClock \
