@@ -216,17 +216,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rsync
 
-ifeq ($(DEFAULT_ROOT_METHOD),rootless)
-else
-# Magisk Manager --> default root method
-PRODUCT_PACKAGES += \
-    MagiskManager
-
-# Copy Magisk zip
-PRODUCT_COPY_FILES += \
-    vendor/viper/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
-endif
-
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
     libffmpeg_extractor \
