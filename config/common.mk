@@ -49,7 +49,6 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/viper/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/viper/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
@@ -80,9 +79,6 @@ PRODUCT_COPY_FILES += \
 
 # Include CM audio files
 include vendor/viper/config/cm_audio.mk
-
-# Theme engine
-include vendor/viper/config/themes_common.mk
 
 ifneq ($(TARGET_DISABLE_CMSDK), true)
 # CMSDK
@@ -271,8 +267,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     viper.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date) \
     ro.viper.version=$(VIPER_VERSION) \
     ro.modversion=$(VIPER_MOD_VERSION) \
-    ro.viper.buildtype=$(VIPER_BUILD_TYPE) \
-    ro.cmlegal.url=https://lineageos.org/legal
+    ro.viper.buildtype=$(VIPER_BUILD_TYPE)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/viper/build/target/product/security/viper
