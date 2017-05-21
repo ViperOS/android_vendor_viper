@@ -94,6 +94,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opa.eligible_device=true
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true
 	
 # PixelLauncher
 PRODUCT_COPY_FILES += \
