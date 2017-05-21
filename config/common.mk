@@ -141,7 +141,6 @@ PRODUCT_PACKAGES += \
     Eleven \
     ExactCalculator \
     Jelly \
-    LineageSetupWizard \
     LiveLockScreenService \
     LockClock \
     ThemeInterfacer \
