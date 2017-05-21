@@ -250,60 +250,25 @@ DEVICE_PACKAGE_OVERLAYS += vendor/viper/overlay/common
 
 # Versioning System
 # ViperOs version.
-PRODUCT_VERSION_MAJOR = 7.1.2
-PRODUCT_VERSION_MINOR = Naja
-PRODUCT_VERSION_MAINTENANCE = v1.0
-ifdef VIPER_BUILD_EXTRA
-    VIPER_POSTFIX := $(VIPER_BUILD_EXTRA)
-endif
+VIPER_CODENAME = Naja
+VIPER_VERSION_NUMBER = v1.0
+
 ifndef VIPER_BUILD_TYPE
-    VIPER_BUILD_TYPE := Release
-    VIPER_POSTFIX := $(shell date +"%Y%m%d")
+    VIPER_BUILD_TYPE := UNOFFICIAL
 endif
 
 # Set all versions
-VIPER_VERSION := Viper-$(VIPER_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)-$(VIPER_POSTFIX)
-VIPER_MOD_VERSION := Viper-$(VIPER_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)-$(VIPER_POSTFIX)
+VIPER_VERSION := Viper-$(PLATFORM_VERSION).$(VIPER_CODENAME)-$(VIPER_VERSION_NUMBER)-$(shell date +"%Y%m%d")-$(VIPER_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    viper.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date) \
-    ro.viper.version=$(VIPER_VERSION) \
-    ro.modversion=$(VIPER_MOD_VERSION) \
-    ro.viper.buildtype=$(VIPER_BUILD_TYPE)
+    viper.ota.version=$(VIPER_VERSION) \
+    ro.viper.version=$(VIPER_VERSION)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/viper/build/target/product/security/viper
 
 -include vendor/viper-priv/keys/keys.mk
-
-VIPER_DISPLAY_VERSION := $(VIPER_VERSION)
-
-ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
-ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
-    ifneq ($(VIPER_BUILDTYPE), UNOFFICIAL)
-        ifndef TARGET_VENDOR_RELEASE_BUILD_ID
-            ifneq ($(VIPER_EXTRAVERSION),)
-                # Remove leading dash from VIPER_EXTRAVERSION
-                VIPER_EXTRAVERSION := $(shell echo $(VIPER_EXTRAVERSION) | sed 's/-//')
-                TARGET_VENDOR_RELEASE_BUILD_ID := $(VIPER_EXTRAVERSION)
-            else
-                TARGET_VENDOR_RELEASE_BUILD_ID := $(shell date -u +%Y%m%d)
-            endif
-        else
-            TARGET_VENDOR_RELEASE_BUILD_ID := $(TARGET_VENDOR_RELEASE_BUILD_ID)
-        endif
-        ifeq ($(VIPER_VERSION_MAINTENANCE),0)
-            VIPER_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(VIPER_BUILD)
-        else
-            VIPER_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(VIPER_VERSION_MAINTENANCE)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(VIPER_BUILD)
-        endif
-    endif
-endif
-endif
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.viper.display.version=$(VIPER_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/viper/config/partner_gms.mk
