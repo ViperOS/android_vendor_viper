@@ -151,10 +151,6 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     OmniJaws
 
-# Exchange support
-PRODUCT_PACKAGES += \
-    Exchange2
-
 # Extra tools in VIPER
 PRODUCT_PACKAGES += \
     7z \
