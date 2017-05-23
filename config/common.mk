@@ -145,7 +145,8 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider \
     ViaBrowser \
-    substratum
+    substratum \
+    Gallery2
 
 # Omni packages
 PRODUCT_PACKAGES += \
