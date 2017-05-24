@@ -137,7 +137,6 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     CustomTiles \
     ExactCalculator \
-    Jelly \
     LiveLockScreenService \
     LockClock \
     ThemeInterfacer \
@@ -145,7 +144,8 @@ PRODUCT_PACKAGES += \
     libbypass \
     WallpaperPicker \
     WeatherProvider \
-    ViaBrowser
+    ViaBrowser \
+    substratum
 
 # Omni packages
 PRODUCT_PACKAGES += \
