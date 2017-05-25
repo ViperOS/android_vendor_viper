@@ -140,8 +140,6 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     LockClock \
     ThemeInterfacer \
-    ViperOTA \
-    libbypass \
     WallpaperPicker \
     WeatherProvider \
     ViaBrowser \
@@ -255,6 +253,13 @@ VIPER_DEVICE := $(VIPER_BUILD)
 
 ifndef VIPER_BUILD_TYPE
     VIPER_BUILD_TYPE := UNOFFICIAL
+endif
+
+ifeq ($(VIPER_BUILD_TYPE), OFFICIAL)
+PRODUCT_PACKAGES += \
+    ViperOTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=http://dl.viper-os.com/ota/$(shell echo "$(VIPER_DEVICE)" | sed 's/viper_*//')
 endif
 
 # Set all versions
