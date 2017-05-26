@@ -259,7 +259,8 @@ ifeq ($(VIPER_BUILD_TYPE), OFFICIAL)
 PRODUCT_PACKAGES += \
     ViperOTA
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.manifest=http://dl.viper-os.com/ota/$(shell echo "$(VIPER_DEVICE)" | sed 's/viper_*//')
+    ro.ota.manifest=http://dl.viper-os.com/ota/$(shell echo "$(VIPER_DEVICE)" | sed 's/viper_*//') \
+    ro.ota.build.date=$(shell date +%Y%m%d)
 endif
 
 # Set all versions
