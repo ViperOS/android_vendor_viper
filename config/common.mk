@@ -143,6 +143,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider \
     ViaBrowser \
+    VPapers \
     substratum \
     Gallery2
 
