@@ -116,8 +116,7 @@ PRODUCT_PACKAGES += \
     CMAudioService \
     CMParts \
     Development \
-    Profiles \
-    WeatherManagerService
+    Profiles
 
 # Optional VIPER packages
 PRODUCT_PACKAGES += \
@@ -141,7 +140,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     ThemeInterfacer \
     WallpaperPicker \
-    WeatherProvider \
     ViaBrowser \
     VPapers \
     substratum \
