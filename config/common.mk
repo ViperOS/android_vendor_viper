@@ -254,14 +254,19 @@ VIPER_DEVICE := $(VIPER_BUILD)
 
 ifndef VIPER_BUILD_TYPE
     VIPER_BUILD_TYPE := UNOFFICIAL
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.viper.buildtype=unofficial
 endif
 
 ifeq ($(VIPER_BUILD_TYPE), OFFICIAL)
 PRODUCT_PACKAGES += \
     ViperOTA
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.manifest=http://dl.viper-os.com/ota/$(shell echo "$(VIPER_DEVICE)" | sed 's/viper_*//') \
+    ro.ota.manifest=http://download.viper-os.com/ota/$(shell echo "$(VIPER_DEVICE)" | sed 's/viper_*//') \
     ro.ota.build.date=$(shell date +%Y%m%d)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.viper.buildtype=official
 endif
 
 # Set all versions
