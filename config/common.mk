@@ -140,7 +140,8 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     VPapers \
     substratum \
-    Gallery2
+    Gallery2 \
+    Jelly
 
 # Omni packages
 PRODUCT_PACKAGES += \
