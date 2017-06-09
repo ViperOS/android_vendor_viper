@@ -121,6 +121,10 @@ PRODUCT_COPY_FILES +=  \
     vendor/viper/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
 endif
 
+# Android O emojis
+PRODUCT_COPY_FILES += \
+    vendor/viper/prebuilt/common/fonts/NotoColorEmoji.ttf:system/fonts/NotoColorEmoji.ttf
+
 # Required VIPER packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
