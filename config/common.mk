@@ -136,7 +136,6 @@ PRODUCT_PACKAGES += \
     CustomTiles \
     ExactCalculator \
     LiveLockScreenService \
-    LockClock \
     ThemeInterfacer \
     WallpaperPicker \
     ViaBrowser \
