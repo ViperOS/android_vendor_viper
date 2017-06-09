@@ -113,7 +113,14 @@ PRODUCT_COPY_FILES += \
 # LatinIme Gestures
 PRODUCT_COPY_FILES += \
     vendor/viper/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-	
+
+# Camera Effects for devices without a vendor partition
+ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
+PRODUCT_COPY_FILES +=  \
+    vendor/viper/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
+    vendor/viper/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+endif
+
 # Required VIPER packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
