@@ -85,10 +85,18 @@ ifneq ($(TARGET_DISABLE_CMSDK), true)
 include vendor/viper/config/cmsdk_common.mk
 endif
 
+ifeq ($(TARGET_USE_AUDIOFX), true)
+PRODUCT_PACKAGES += \
+    AudioFX \
+    CMAudioService
+else
+PRODUCT_PACKAGES += \
+    MusicFX
 ifneq ($(TARGET_NO_DSPMANAGER), true)
 PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf
+endif
 endif
 
 # Bootanimation
@@ -134,7 +142,6 @@ PRODUCT_COPY_FILES += \
 # Required VIPER packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    CMAudioService \
     CMParts \
     Development \
     Profiles
@@ -152,7 +159,6 @@ PRODUCT_PACKAGES += \
 
 # Custom VIPER packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     CMSettingsProvider \
     CustomTiles \
     ExactCalculator \
