@@ -138,7 +138,6 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     ThemeInterfacer \
     WallpaperPicker \
-    ViaBrowser \
     VPapers \
     substratum \
     Gallery2
