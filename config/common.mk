@@ -139,7 +139,6 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     WallpaperPicker \
     VPapers \
-    substratum \
     Gallery2 \
     Jelly
 
