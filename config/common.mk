@@ -109,6 +109,10 @@ PRODUCT_COPY_FILES += \
 # Turbo
 PRODUCT_COPY_FILES += \
     vendor/viper/prebuilt/common/apk/Turbo/Turbo.apk:system/priv-app/Turbo/Turbo.apk
+
+# LatinIme Gestures
+PRODUCT_COPY_FILES += \
+    vendor/viper/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 	
 # Required VIPER packages
 PRODUCT_PACKAGES += \
