@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= ViperOs
+PRODUCT_BRAND ?= ViperOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -106,18 +106,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.substratum.verified=true
-	
-# PixelLauncher
-PRODUCT_COPY_FILES += \
-    vendor/viper/prebuilt/common/apk/PixelLauncher/PixelLauncher.apk:system/priv-app/PixelLauncher/PixelLauncher.apk
-	
-# GoogleWallpaperPicker
-PRODUCT_COPY_FILES += \
-    vendor/viper/prebuilt/common/apk/GoogleWallpaperPicker/GoogleWallpaperPicker.apk:system/app/GoogleWallpaperPicker/GoogleWallpaperPicker.apk
-	
-# Turbo
-PRODUCT_COPY_FILES += \
-    vendor/viper/prebuilt/common/apk/Turbo/Turbo.apk:system/priv-app/Turbo/Turbo.apk
 
 # LatinIme Gestures
 PRODUCT_COPY_FILES += \
@@ -133,6 +121,13 @@ endif
 # Android O emojis
 PRODUCT_COPY_FILES += \
     vendor/viper/prebuilt/common/fonts/NotoColorEmoji.ttf:system/fonts/NotoColorEmoji.ttf
+
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+    WallpaperPickerGooglePrebuilt \
+    NexusLauncherPrebuilt \
+    PrebuiltDeskClockGoogle \
+    Turbo
 
 # Required VIPER packages
 PRODUCT_PACKAGES += \
@@ -197,7 +192,7 @@ PRODUCT_PACKAGES += \
     zip
 
 # Custom off-mode charger
-ifneq ($(WITH_VIPER_CHARGER),false)
+ifneq ($(WITH_CM_CHARGER),false)
 PRODUCT_PACKAGES += \
     charger_res_images \
     cm_charger_res_images \
