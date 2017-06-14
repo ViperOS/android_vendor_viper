@@ -124,9 +124,9 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-    WallpaperPickerGooglePrebuilt \
-    NexusLauncherPrebuilt \
-    PrebuiltDeskClockGoogle \
+    GoogleWallpaperPicker \
+    PixelLauncher \
+    DeskClockGoogle \
     Turbo
 
 # Required VIPER packages

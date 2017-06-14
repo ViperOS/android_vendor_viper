@@ -10,9 +10,9 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := PrebuiltDeskClockGoogle
+LOCAL_MODULE := DeskClockGoogle
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := apk/PrebuiltDeskClockGoogle/PrebuiltDeskClockGoogle.apk
+LOCAL_SRC_FILES := apk/DeskClockGoogle/DeskClockGoogle.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_OVERRIDES_PACKAGES := DeskClock
@@ -20,9 +20,9 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := WallpaperPickerGooglePrebuilt
+LOCAL_MODULE := GoogleWallpaperPicker
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := apk/WallpaperPickerGooglePrebuilt/WallpaperPickerGooglePrebuilt.apk
+LOCAL_SRC_FILES := apk/GoogleWallpaperPicker/GoogleWallpaperPicker.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_OVERRIDES_PACKAGES := WallpaperPicker \
@@ -31,9 +31,9 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := NexusLauncherPrebuilt
+LOCAL_MODULE := PixelLauncher
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := apk/NexusLauncherPrebuilt/NexusLauncherPrebuilt.apk
+LOCAL_SRC_FILES := apk/PixelLauncher/PixelLauncher.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
