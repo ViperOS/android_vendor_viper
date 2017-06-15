@@ -125,7 +125,7 @@ PRODUCT_COPY_FILES += \
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
     GoogleWallpaperPicker \
-    PixelLauncher \
+    VLauncher \
     DeskClockGoogle \
     Turbo
 
