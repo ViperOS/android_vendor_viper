@@ -45,7 +45,7 @@ default_manifest = ".repo/manifest.xml"
 custom_local_manifest = ".repo/local_manifests/viper_manifest.xml"
 custom_default_revision = "nougat"
 custom_dependencies = "viper.dependencies"
-org_manifest = "viperD"  # leave empty if org is provided in manifest
+org_manifest = "viper-devices"  # leave empty if org is provided in manifest
 org_display = "ViperOS-Devices"  # needed for displaying
 
 github_auth = None
