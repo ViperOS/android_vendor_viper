@@ -126,7 +126,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     GoogleWallpaperPicker \
     VLauncher \
-    DeskClockGoogle \
+    GDeskClock \
     Turbo
 
 # Required VIPER packages
