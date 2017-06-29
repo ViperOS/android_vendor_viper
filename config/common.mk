@@ -150,7 +150,6 @@ PRODUCT_PACKAGES += \
 # Custom VIPER packages
 PRODUCT_PACKAGES += \
     CMSettingsProvider \
-    CustomTiles \
     ExactCalculator \
     LiveLockScreenService \
     ThemeInterfacer \
