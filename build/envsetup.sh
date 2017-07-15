@@ -42,7 +42,7 @@ function breakfast()
     local variant=$2
     VIPER_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
-    for f in `/bin/ls vendor/viper.vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/viper/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -921,7 +921,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/viper.build/tools/repopick.py $@
+    $T/vendor/viper/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
