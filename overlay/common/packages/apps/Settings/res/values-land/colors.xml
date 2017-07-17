@@ -13,5 +13,5 @@
 -->
 
 <resources>
-    <drawable name="fp_enrollment_header_landscape">#4285f4</drawable>
+    <drawable name="fp_enrollment_header_landscape">@*android:color/accent_material_light</drawable>
 </resources>

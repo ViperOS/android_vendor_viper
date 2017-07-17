@@ -16,10 +16,10 @@
 
 <resources>
     <color name="primary_color">#ff212121</color>
-    <color name="primary_dark_color">@color/material_blue_grey_950</color>
+    <color name="primary_dark_color">@color/material_blue_500</color>
     <color name="secondary_color">#ff303030</color>
     <color name="accent_color">@color/material_blue_500</color>
     <color name="accent_color_lighter">@color/material_blue_400</color>
-    <color name="material_blue_400">#ff5e97f6</color>
-    <color name="material_blue_500">#ff4285f4</color>
+    <color name="material_blue_400">@*android:color/accent_material_light</color>
+    <color name="material_blue_500">@*android:color/accent_material_light</color>
 </resources>

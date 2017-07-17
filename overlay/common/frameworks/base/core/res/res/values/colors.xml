@@ -16,33 +16,19 @@
     <!-- System error color -->
     <color name="system_error">#ffea4335</color> <!-- deep orange 600 -->
 
-    <color name="highlighted_text_dark">#ff4285f4</color>
-    <color name="highlighted_text_light">#ff4285f4</color>
-    <color name="link_text_dark">#ff4285f4</color>
-    <color name="link_text_light">#ff4285f4</color>
-	
-	<color name="system_notification_accent_color">#ff4285f4</color>
-	
-	<color name="user_icon_1">#ff4285f4</color><!-- cyan 500 -->
-    <color name="user_icon_2">#ff4285f4</color><!-- indigo 500 -->
-    <color name="user_icon_3">#ff4285f4</color><!-- blue 500 -->
-    <color name="user_icon_4">#ff4285f4</color><!-- pink 500 -->
-    <color name="user_icon_5">#ff4285f4</color><!-- green 500 -->
-    <color name="user_icon_6">#ff4285f4</color><!-- light green 500 -->
-    <color name="user_icon_7">#ff4285f4</color><!-- orange 500 -->
-    <color name="user_icon_8">#ff4285f4</color><!-- deep orange 500 -->
-	
-    <color name="Teal_700">#ff303030</color>
-    <color name="Teal_800">#ff212121</color>
-    <color name="Blue_700">#ff303030</color>
-    <color name="Blue_800">#ff212121</color>
-    <color name="Indigo_700">#ff303030</color>
-    <color name="Indigo_800">#ff212121</color>
-    <color name="Purple_700">#ff303030</color>
-    <color name="Purple_800">#ff212121</color>
-    <color name="Pink_700">#ff303030</color>
-    <color name="Pink_800">#ff212121</color>
-    <color name="Red_700">#ff303030</color>
-    <color name="Red_800">#ff212121</color>
-	
+    <color name="highlighted_text_dark">@*android:color/accent_material_light</color>
+    <color name="highlighted_text_light">@*android:color/accent_material_light</color>
+    <color name="link_text_dark">@*android:color/accent_material_light</color>
+    <color name="link_text_light">@*android:color/accent_material_light</color>
+    
+    <color name="system_notification_accent_color">@*android:color/accent_material_light</color>
+    
+    <color name="user_icon_1">#ff9e9e9e</color><!-- cyan 500 -->
+    <color name="user_icon_2">#ff9e9e9e</color><!-- indigo 500 -->
+    <color name="user_icon_3">#ff9e9e9e</color><!-- blue 500 -->
+    <color name="user_icon_4">#ff9e9e9e</color><!-- pink 500 -->
+    <color name="user_icon_5">#ff9e9e9e</color><!-- green 500 -->
+    <color name="user_icon_6">#ff9e9e9e</color><!-- light green 500 -->
+    <color name="user_icon_7">#ff9e9e9e</color><!-- orange 500 -->
+    <color name="user_icon_8">#ff9e9e9e</color><!-- deep orange 500 -->
 </resources>

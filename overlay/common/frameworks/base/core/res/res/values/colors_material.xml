@@ -14,11 +14,12 @@
 
 <resources>
 
-    <color name="material_deep_teal_200">#ff4285f4</color>
-    <color name="material_deep_teal_500">#ff4285f4</color>
-    <color name="material_deep_teal_700">#ff4285f4</color>
+    <color name="accent_material_light">#ff4285f4</color>
+    <color name="material_deep_teal_200">@*android:color/accent_material_light</color>
+    <color name="material_deep_teal_500">@*android:color/accent_material_light</color>
+    <color name="material_deep_teal_700">@*android:color/accent_material_light</color>
 
-    <color name="material_blue_grey_200">#ff4285f4</color>
+    <color name="material_blue_grey_200">@*android:color/accent_material_light</color>
     <color name="material_blue_grey_800">#ff303030</color>
     <color name="material_blue_grey_900">#ff212121</color>
 	
