@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <style name="SettingsLight" parent="android:Theme.Material">
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionBarStyle">@style/DialtactsActionBarStyle</item>
+        <item name="android:actionMenuTextColor">@color/phone_settings_actionbar_text_color</item>
+        <item name="android:actionOverflowButtonStyle">@style/DialtactsActionBarOverflow</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:colorPrimaryDark">#000000</item>
+        <!-- Setting text. -->
+        <item name="android:textColorPrimary">#ffffff</item>
+        <!-- Setting description. -->
+        <item name="android:textColorSecondary">#dddddd</item>
+    </style>
+
+    <style name="DialerSettingsLight" parent="SettingsLight">
+        <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
+        <item name="android:dialogTheme">@style/DialerAlertDialogTheme</item>
+    </style>
+
+    <style name="DialerAlertDialogTheme"
+        parent="@android:style/Theme.Material.Dialog">
+        <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="SimImportTheme" parent="@android:style/Theme.Material">
+        <item name="android:actionBarStyle">@style/TelephonyActionBarStyle</item>
+        <item name="android:colorPrimaryDark">@*android:color/accent_material_light</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>
+        <item name="android:actionOverflowButtonStyle">@style/DialtactsActionBarOverflow</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:textColorSecondary">#dddddd</item>
+    </style>
+</resources>

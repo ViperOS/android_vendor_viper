@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2015 The Android Open Source Project
+ 
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+ 
+         http://www.apache.org/licenses/LICENSE-2.0
+ 
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+    <!-- DSLV colors -->
+    <color name="dslv_float_background_color">@*android:color/accent_material_light</color>
+    <color name="dslv_float_cackground_color">@*android:color/accent_material_light</color>
+    <color name="dslv_icon_dark">@*android:color/accent_material_light</color>
+    <color name="setup_wizard_wifi_color_dark">@*android:color/accent_material_light</color>
+    <color name="switch_accent_color">@*android:color/accent_material_light</color>
+    <color name="fab_rr_bg">@*android:color/accent_material_light</color>
+
+    <!-- Storage icons -->
+    <color name="storage_public">#ff9e9e9e</color>
+    <color name="storage_warning">#fff4511e</color>
+    <color name="storage_private_1">@*android:color/accent_material_light</color>
+    <color name="storage_private_2">#ffab47bc</color>
+    <color name="storage_private_3">#fff2a600</color>
+    <color name="storage_private_4">#ffec407a</color>
+    <color name="storage_private_5">#ffc0ca33</color>
+
+    <!-- Linear color bar -->
+    <color name="linear_color_bar_left">@*android:color/accent_material_light</color>
+    <color name="linear_color_bar_middle">@*android:color/accent_material_light</color>
+    <color name="condition_card_icon_color">@*android:color/accent_material_light</color>
+    <color name="theme_accent">@*android:color/accent_material_light</color>
+    <color name="exposed_expanded_item">@*android:color/accent_material_light</color>
+    <color name="ic_settings_icons_exposed">@*android:color/accent_material_light</color>
+    <color name="qs_tile_tint_color">@*android:color/accent_material_light</color>
+    <color name="exposed_barPrimaryColor">@*android:color/accent_material_light</color>
+    <color name="exposed_datachartfillcolor">@*android:color/accent_material_light</color>
+    <color name="fingerprint_title_area_bg">@*android:color/accent_material_light</color>
+    <color name="fingerprint_progress_ring">@*android:color/accent_material_light</color>
+    <color name="icon_color">@*android:color/accent_material_light</color>
+    <color name="fab_shape">@*android:color/accent_material_light</color>
+    <color name="importance_secondary_slider_color">@*android:color/accent_material_light</color>
+    <color name="icon_accent">@*android:color/accent_material_light</color>
+    <color name="nfc_how_it_works_got_it_text_color">@*android:color/accent_material_light</color>
+    <!-- Misc Hard colors-->
+    <color name="importance_secondary_slider_tickMarkTint_color">@*android:color/accent_material_light</color>
+    <color name="icon_tint_color">@*android:color/accent_material_light</color>
+    <color name="extrainfo_cat_text">@*android:color/accent_material_dark</color>
+    <color name="summary_default_start">@*android:color/accent_material_dark</color>
+    <color name="storage_summary_title_color">@*android:color/accent_material_dark</color>
+    <color name="memory_max_use">@*android:color/accent_material_dark</color>
+    <color name="memory_normal">@*android:color/accent_material_dark</color>
+    <color name="memory_used">@*android:color/accent_material_dark</color>
+	<color name="suw_list_item_icon_color_dark">@*android:color/accent_material_dark</color>
+    <color name="suw_list_item_icon_color_light">@*android:color/accent_material_dark</color>
+    <color name="external_icon_tint">@*android:color/accent_material_dark</color>
+</resources>

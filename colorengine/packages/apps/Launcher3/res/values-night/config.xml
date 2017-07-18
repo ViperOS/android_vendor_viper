@@ -1,0 +1,4 @@
+<resources>
+<!-- Miscellaneous -->
+    <bool name="disable_statusbar_color_inversion">true</bool>
+</resources>
