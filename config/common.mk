@@ -94,6 +94,11 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+include vendor/cm/config/twrp.mk
+endif
+
 # Bootanimation
 PRODUCT_PACKAGES += \
     bootanimation.zip
