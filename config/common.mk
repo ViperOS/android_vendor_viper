@@ -263,8 +263,8 @@ DEVICE_PACKAGE_OVERLAYS += vendor/viper/overlay/common
 
 # Versioning System
 # ViperOs version.
-VIPER_VERSION_CODENAME := Python
-VIPER_VERSION_NUMBER := v2.1
+VIPER_VERSION_CODENAME := Coral
+VIPER_VERSION_NUMBER := v3.0
 
 VIPER_DEVICE := $(VIPER_BUILD)
 
