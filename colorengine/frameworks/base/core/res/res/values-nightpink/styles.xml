@@ -247,13 +247,13 @@
        </style>     
     <style name="TextAppearance.StatusBar.EventContent">
         <item name="android:textColor">#ffffffff</item>
-	    <item name="android:textStyle">bold</item>
-
+        <item name="textSize">@dimen/notification_text_size</item>
     </style>
     <style name="TextAppearance.StatusBar.EventContent.Title">
-        <item name="android:textColor">#ffffffff</item>
-	    <item name="android:textStyle">bold</item>
-
+        <item name="textColor">#ffffff</item>
+        <item name="fontFamily">sans-serif-light</item>
+        <item name="textSize">@dimen/notification_title_text_size</item>
+        <item name="textStyle">bold</item>
   </style>
     <style name="TextAppearance.StatusBar.EventContent.Line2">
         <item name="android:textColor">#b3ffffff</item>	
@@ -278,12 +278,10 @@
     <style name="TextAppearance.Material.Notification.Time" parent="@android:style/TextAppearance.Material.Notification">
         <item name="android:textColor">#ffffffff</item>
         <item name="android:textSize">13sp</item>
-	    <item name="android:textStyle">bold</item>
     </style>
     <style name="TextAppearance.Material.Notification.Title" parent="@android:style/TextAppearance.Material.Notification">
         <item name="android:textColor">#ffffffff</item>
-        <item name="android:textSize">13sp</item>
-	    <item name="android:textStyle">bold</item>
+        <item name="textSize">@dimen/notification_title_text_size</item>
     </style>
 
     <style name="TextAppearance.Material.Notification.Emphasis" parent="@android:style/TextAppearance.Material">
@@ -331,17 +329,28 @@
         <item name="android:colorAccent">@*android:color/accent_material_light</item>
     </style>
     <style name="TextAppearance.Material.Body2" parent="@android:style/TextAppearance.Material">
-        <item name="android:textAllCaps">true</item>
-		<item name="android:letterSpacing">0.10</item>
-		<item name="android:fontFamily">sans-serif</item>
-		<item name="android:textStyle">bold</item>
+
+        <!-- <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.10</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item> -->
+
+        <item name="textSize">@dimen/text_size_body_2_material</item>
+        <item name="fontFamily">@string/font_family_body_2_material</item>
+        <item name="textColor">?attr/textColorPrimary</item>
     </style>
     <style name="TextAppearance.Material.Title" parent="@android:style/TextAppearance.Material">
-        <item name="android:textColor">?android:textColorPrimary</item>
-		<item name="android:textSize">16.0sp</item>
-		<item name="android:fontFamily">sans-serif</item>
-		<item name="android:textStyle">bold</item>
-        <item name="android:textAllCaps">true</item>
+
+       <!-- <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item> -->
+
+        <item name="textSize">@dimen/text_size_title_material</item>
+        <item name="fontFamily">@string/font_family_title_material</item>
+        <item name="textColor">?attr/textColorPrimary</item>
+
     </style>
     <style name="TextAppearance.Material.Notification.Reply" parent="@*android:style/TextAppearance.Material.Notification">
         <item name="android:textColor">#ffffffff</item>

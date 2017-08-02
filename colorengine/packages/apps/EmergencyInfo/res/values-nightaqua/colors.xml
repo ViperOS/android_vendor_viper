@@ -19,4 +19,7 @@
     <color name="primary_dark_color">#000000</color>
     <color name="accent_color_light">@*android:color/accent_material_light</color>
     <color name="accent_color_dark">@*android:color/accent_material_light</color>
+    <color name="emergency_primary_dark">#000000</color>
+    <color name="emergency_primary">#000000</color>
+    <color name="emergency_accent">@*android:color/accent_material_light</color>
 </resources>

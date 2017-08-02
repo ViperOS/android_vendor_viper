@@ -151,7 +151,7 @@
 
     <color name="setup_divider_color_dark">#33ffffff</color>
     <color name="setup_lock_pattern_view_regular_color_dark">#ffbdbdbd</color>
-    <color name="setup_lock_pattern_view_success_color_dark">#ff84ffff</color>
+    <color name="setup_lock_pattern_view_success_color_dark">@*android:color/accent_material_light</color>
     <color name="setup_lock_pattern_view_error_color_dark">#fff44336</color>
 
     <color name="system_warning_color">#D32F2F</color><!-- deep orange 600 -->
@@ -165,8 +165,8 @@
     <color name="fingerprint_title_area_bg">@*android:color/accent_material_light</color>
     <color name="fingerprint_title_color">#ffffffff</color>
     <color name="fingerprint_progress_ring">@*android:color/accent_material_light</color>
-    <color name="fingerprint_progress_ring_bg">#20000000</color>
-    <color name="fingerprint_indicator_background_resting">#12000000</color>
+    <color name="fingerprint_progress_ring_bg">#cccccc</color>
+    <color name="fingerprint_indicator_background_resting">#cccccc</color>
     <color name="fingerprint_message_color">#ff999999</color>
     <color name="icon_color">@*android:color/accent_material_light</color>
     <color name="wifi_divider">#ffe0e0e0</color>
@@ -185,17 +185,7 @@
 
     <color name="memory_avg_use">@*android:color/material_grey_800</color>
 
-    <color name="message_text_incoming">#ffffffff</color>
-    <color name="message_text_outgoing">#ffffffff</color>
-    <color name="timestamp_text_outgoing">#ffffffff</color>
-    <color name="timestamp_text_incoming">#ffffffff</color>
-    <color name="message_bubble_incoming">@*android:color/material_grey_800</color>
-    <color name="message_bubble_outgoing">@*android:color/material_grey_800</color>
     <color name="conversation_background">@*android:color/background_material_dark</color>
-    <color name="message_icon_background_incoming">@*android:color/material_grey_800</color>
-    <color name="message_icon_text_incoming">#ffffffff</color>
-    <color name="message_icon_background_outgoing">@*android:color/material_grey_800</color>
-    <color name="message_icon_text_outgoing">#ffffffff</color>
 
     <color name="seek_bar_preference_preview_text">#fff</color>
     <color name="expanded_app_title_color">#ffffff</color>

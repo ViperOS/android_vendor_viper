@@ -32,7 +32,7 @@
     </style>
 
     <!-- Toolbar -->
-    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat" />
 
     <!-- ActionBar -->
     <style name="ActionBarThemeOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">

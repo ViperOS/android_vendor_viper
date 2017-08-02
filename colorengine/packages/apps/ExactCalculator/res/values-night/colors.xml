@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="calculator_accent_color">@*android:color/material_grey_800</color>
+    <color name="calculator_error_color">@*android:color/accent_material_light</color>
+    <color name="display_background_color">@*android:color/background_material_dark</color>
+    <color name="display_formula_text_color">@*android:color/accent_material_light</color>
+    <color name="display_result_text_color">@*android:color/accent_material_light</color>
+    <color name="pad_numeric_background_color">@*android:color/background_material_dark</color>
+    <color name="pad_operator_background_color">@*android:color/material_grey_800</color>
+    <color name="pad_advanced_background_color">@*android:color/accent_material_light</color>
+    <color name="pad_button_text_color">#ffffffff</color>
+    <color name="pad_button_advanced_text_color">@*android:color/background_material_dark</color>
+    <color name="pad_button_ripple_color">@*android:color/accent_material_light</color>
+    <color name="pad_button_advanced_ripple_color">#b3ffffff</color>
+	
+	<color name="primary_text_default_material_light">@*android:color/background_material_dark</color>
+    <color name="secondary_text_default_material_light">#b3ffffff</color>
+    <color name="primary_text_disabled_material_light">#4dffffff</color>
+    <color name="secondary_text_disabled_material_light">#36ffffff</color>
+</resources>

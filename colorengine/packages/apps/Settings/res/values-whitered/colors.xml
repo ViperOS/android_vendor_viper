@@ -35,7 +35,7 @@
     <!-- Linear color bar -->
     <color name="linear_color_bar_left">@*android:color/accent_material_light</color>
     <color name="linear_color_bar_middle">@*android:color/accent_material_light</color>
-    <color name="condition_card_icon_color">@*android:color/accent_material_light</color>
+    <color name="condition_card_icon_color">#ffffff</color>
     <color name="theme_accent">@*android:color/accent_material_light</color>
     <color name="exposed_expanded_item">@*android:color/accent_material_light</color>
     <color name="ic_settings_icons_exposed">@*android:color/accent_material_light</color>

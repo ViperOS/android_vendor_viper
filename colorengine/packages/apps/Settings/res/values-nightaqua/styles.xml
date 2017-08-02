@@ -56,8 +56,12 @@
 		<item name="android:navigationBarColor">@*android:color/background_material_dark</item>
     </style>
     <style name="Theme.ActionBar" parent="@android:style/Widget.Material.ActionBar.Solid">
-        <item name="android:background">@*android:color/material_grey_800</item>
+        <item name="android:background">#000000</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitleText</item>
         <item name="android:elevation">0.0dip</item>
+    </style>
+    <style name="ActionBarTitleText" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
     </style>
     <style name="TextAppearance.CategoryTitle" parent="@android:style/TextAppearance.Material.Body2">
         <item name="android:textColor">@*android:color/accent_material_light</item>
@@ -90,5 +94,13 @@
         <item name="android:textAppearance">@*android:style/TextAppearance.Material.Subhead</item>
         <item name="android:textColor">#b3ffffff</item>
         <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="Theme.FingerprintEnroll" parent="SuwThemeGlif">
+        <item name="android:textAppearanceListItemSmall">@android:style/TextAppearance.Material.Body1</item>
+
+        <item name="suwDividerCondition">both</item>
+        <item name="suwListItemIconColor">?android:attr/colorAccent</item>
+        <item name="android:actionBarStyle">@style/Theme.ActionBar</item>
     </style>
 </resources>

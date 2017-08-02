@@ -18,7 +18,7 @@
 -->
 <resources>
 
-	<color name="accent_material_light">#0EB7B2</color><!-- accent-->
+	<color name="accent_material_light">#00bcd4</color><!-- accent-->
 
     <color name="group_button_dialog_pressed_holo_dark">@*android:color/accent_material_light</color>
     <color name="group_button_dialog_focused_holo_dark">@*android:color/accent_material_light</color>
@@ -49,8 +49,7 @@
     <color name="accent_device_default_dark">@*android:color/accent_material_light</color>
     <color name="accent_device_default_50">@*android:color/accent_material_light</color>
 	
-    <color name="user_icon_default_gray">@*android:color/accent_material_light</color>
-    <color name="user_icon_default_white">@*android:color/accent_material_light</color>
+    
     <color name="notification_title_text">@*android:color/accent_material_light</color>
     <color name="notification_content_text">@*android:color/accent_material_light</color>
     <color name="legacy_control_activated">@*android:color/accent_material_light</color>
@@ -71,14 +70,5 @@
     <!-- Shutdown/reboot dialog -->
     <color name="shutdown_progress_tint">@*android:color/accent_material_light</color>
     
-    <!-- User icon -->
-    <color name="user_icon_1">#0EB7B2</color><!-- cyan 500 -->
-    <color name="user_icon_2">#0EB7B2</color><!-- indigo 500 -->
-    <color name="user_icon_3">#0EB7B2</color><!-- blue 500 -->
-    <color name="user_icon_4">#0EB7B2</color><!-- pink 500 -->
-    <color name="user_icon_5">#0EB7B2</color><!-- green 500 -->
-    <color name="user_icon_6">#0EB7B2</color><!-- light green 500 -->
-    <color name="user_icon_7">#0EB7B2</color><!-- orange 500 -->
-    <color name="user_icon_8">#0EB7B2</color><!-- deep orange 500 -->
 
 </resources>

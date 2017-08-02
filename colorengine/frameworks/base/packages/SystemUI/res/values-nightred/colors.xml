@@ -205,7 +205,7 @@
 
     <!-- Floating action button -->
     <color name="fab_color">@*android:color/accent_material_light</color>
-    <color name="floating_action_button_icon_color">@*android:color/background_material_dark</color>
+    <color name="floating_action_button_icon_color">#ffffff</color>
 
     <!-- Slim recent -->
     <color name="recents_empty_dark_color">#ff4d4d4d</color>

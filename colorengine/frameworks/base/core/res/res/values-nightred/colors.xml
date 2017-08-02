@@ -124,8 +124,7 @@
     <color name="accent_device_default_dark">@*android:color/accent_material_light</color>
     <color name="accent_device_default_50">@*android:color/accent_material_light</color>
 	
-    <color name="user_icon_default_gray">@*android:color/accent_material_light</color>
-    <color name="user_icon_default_white">@*android:color/accent_material_light</color>
+    
     <color name="notification_title_text">@*android:color/accent_material_light</color>
     <color name="notification_content_text">@*android:color/accent_material_light</color>
     <color name="legacy_control_activated">@*android:color/accent_material_light</color>
@@ -211,14 +210,5 @@
     <color name="shutdown_primary_text">#ffffffff</color>
     <color name="shutdown_progress_tint">@*android:color/accent_material_light</color>
     
-    <!-- User icon -->
-    <color name="user_icon_1">#e50914</color><!-- cyan 500 -->
-    <color name="user_icon_2">#e50914</color><!-- indigo 500 -->
-    <color name="user_icon_3">#e50914</color><!-- blue 500 -->
-    <color name="user_icon_4">#e50914</color><!-- pink 500 -->
-    <color name="user_icon_5">#e50914</color><!-- green 500 -->
-    <color name="user_icon_6">#e50914</color><!-- light green 500 -->
-    <color name="user_icon_7">#e50914</color><!-- orange 500 -->
-    <color name="user_icon_8">#e50914</color><!-- deep orange 500 -->
 
 </resources>
