@@ -12,7 +12,7 @@ import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.GridLayout;
+import android.widget.LinearLayout;
 import android.widget.ImageView;
 
 import com.android.settings.R;
@@ -21,7 +21,7 @@ import com.android.settings.R;
  * Created by Kizito Nwose on 9/28/2016.
  */
 public class ColorDialog extends DialogFragment {
-    private GridLayout colorGrid;
+    private LinearLayout colorLayout;
     private OnColorSelectedListener colorSelectedListener;
     private int numColumns;
     private int[] colorChoices;
@@ -89,8 +89,7 @@ public class ColorDialog extends DialogFragment {
         LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
         View rootView = layoutInflater.inflate(R.layout.dialog_colors, null);
 
-        colorGrid = (GridLayout) rootView.findViewById(R.id.color_grid);
-        colorGrid.setColumnCount(numColumns);
+        colorLayout = (LinearLayout) rootView.findViewById(R.id.color_layout);
         repopulateItems();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -108,15 +107,15 @@ public class ColorDialog extends DialogFragment {
     }
 
     private void repopulateItems() {
-        if (colorSelectedListener == null || colorGrid == null) {
+        if (colorSelectedListener == null || colorLayout == null) {
             return;
         }
 
-        Context context = colorGrid.getContext();
-        colorGrid.removeAllViews();
+        Context context = colorLayout.getContext();
+        colorLayout.removeAllViews();
         for (final int color : colorChoices) {
             View itemView = LayoutInflater.from(context)
-                    .inflate(R.layout.grid_item_color, colorGrid, false);
+                    .inflate(R.layout.grid_item_color, colorLayout, false);
 
             ColorUtils.setColorViewValue((ImageView) itemView.findViewById(R.id.color_view), color,
                     color == selectedColorValue, colorShape);
@@ -133,7 +132,7 @@ public class ColorDialog extends DialogFragment {
                 }
             });
 
-            colorGrid.addView(itemView);
+            colorLayout.addView(itemView);
         }
 
     }
