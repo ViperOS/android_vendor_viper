@@ -169,6 +169,10 @@ public class ColorEngineUtils {
         return getDefaultAccentColor();
     }
 
+    public static Boolean isDefaultNightMode(int nightMode){
+        return nightMode == MODE_NIGHT_DEFAULT;
+    }
+
     public static int colorToNightModeInt(int primaryColor, int accentColor) {
         Boolean isPrimaryColorWhite = primaryColor == Color.parseColor(THEME_ENGINE_COLOR_WHITE);
         Boolean isPrimaryColorBlack = primaryColor == Color.parseColor(THEME_ENGINE_COLOR_BLACK);
