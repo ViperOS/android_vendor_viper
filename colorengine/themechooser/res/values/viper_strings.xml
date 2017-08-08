@@ -24,6 +24,7 @@
     <string name="apply_theme_message">The system interface must be restarted for the selected theme to be applied correctly. Do you want to restart now?</string>
     <string name="apply_theme_not_now">Not now</string>
     <string name="apply_theme_progress">Applying theme...</string>
+    <string name="apply_theme_toast">Tap the icon on the top to restart system interface and apply the theme.</string>
     <string name="theme_chooser_settings_title">Theme settings</string>
     <string name="reset_default_theme">Reset to default theme</string>
     <string name="reset_default_theme_message">Are you sure you want to reset ?</string>

@@ -23,6 +23,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
@@ -31,11 +32,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.android.settings.R;
 import com.kizitonwose.colorpreference.ColorDialog;
 import com.kizitonwose.colorpreference.ColorPreference;
 import com.viper.colorengine.utils.ColorEngineUtils;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class ChooserPrefs extends PreferenceFragment implements ColorDialog.OnColorSelectedListener {
 
@@ -110,6 +114,7 @@ public class ChooserPrefs extends PreferenceFragment implements ColorDialog.OnCo
             uiManager.setNightMode(newNightMode);
             updateResetToDefaultTheme();
         }
+        showApplyToast();
     }
 
     @Override
@@ -169,6 +174,17 @@ public class ChooserPrefs extends PreferenceFragment implements ColorDialog.OnCo
             return;
         }
         menu.getItem(MENU_RESET_DEFAULT_THEME).setEnabled(uiManager.getNightMode() != ColorEngineUtils.MODE_NIGHT_DEFAULT);
+    }
+
+    private void showApplyToast(){
+        SharedPreferences prefs = getActivity().getSharedPreferences("color_engine", MODE_PRIVATE);
+        boolean alreadyShown = prefs.getInt("apply_toast_already_shown", 0) == 1;
+        if (!alreadyShown){
+            SharedPreferences.Editor editor = getActivity().getSharedPreferences("color_engine", MODE_PRIVATE).edit();
+            editor.putInt("apply_toast_already_shown", 1);
+            editor.apply();
+            Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.apply_theme_toast), Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
