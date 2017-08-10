@@ -17,13 +17,18 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:scrollbars="none">
+    android:fadeScrollbars="false"
+    android:overScrollMode="never"
+    android:scrollbarThumbHorizontal="@drawable/scrollbar_theme_chooser">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:id="@+id/color_layout">
 
     </LinearLayout>
