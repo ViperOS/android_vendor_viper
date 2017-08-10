@@ -21,7 +21,6 @@
     <color name="accent_material_dark">@*android:color/accent_material_light</color>
     <color name="data_usage_graph_warning">@*android:color/accent_material_dark</color>
     <color name="data_usage_primary">@*android:color/accent_material_dark</color>
-    <color name="system_warning_color">@*android:color/accent_material_dark</color>
     <color name="tm_floating_action_button_bg_color">@*android:color/accent_material_dark</color>
 
     <!-- Sceenshot Crop and Share -->
