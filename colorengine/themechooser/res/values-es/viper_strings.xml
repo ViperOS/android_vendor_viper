@@ -24,6 +24,7 @@
   <string name="apply_theme_message">La UI de sistema debe ser reiniciada para aplicar el tema seleccionado de manera correcta. Desea reiniciar ahora?</string>
   <string name="apply_theme_not_now">Ahora no</string>
   <string name="apply_theme_progress">Aplicando tema...</string>
+  <string name="apply_theme_toast">Toque el icono en la parte superior para reiniciar la UI del sistema y aplicar el tema.</string>
   <string name="theme_chooser_settings_title">Ajustes de tema</string>
   <string name="reset_default_theme">Volver al tema predeterminado</string>
   <string name="reset_default_theme_message">Está seguro que quiere restaurar el tema?</string>
