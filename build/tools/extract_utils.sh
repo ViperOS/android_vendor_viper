@@ -44,7 +44,7 @@ trap cleanup 0
 #
 # $1: device name
 # $2: vendor name
-# $3: Lineage root directory
+# $3: Viper root directory
 # $4: is common device - optional, default to false
 # $5: cleanup - optional, default to true
 # $6: custom vendor makefile name - optional, default to false
@@ -547,14 +547,14 @@ function write_header() {
         if [ $YEAR -eq 2017 ]; then
             printf "# Copyright (C) 2017 The LineageOS Project\n" >> $1
         elif [ $INITIAL_COPYRIGHT_YEAR -eq $YEAR ]; then
-            printf "# Copyright (C) $YEAR The LineageOS Project\n" >> $1
+            printf "# Copyright (C) $YEAR ViperOS Project\n" >> $1
         elif [ $INITIAL_COPYRIGHT_YEAR -le 2017 ]; then
-            printf "# Copyright (C) 2017-$YEAR The LineageOS Project\n" >> $1
+            printf "# Copyright (C) 2017-$YEAR ViperOS Project\n" >> $1
         else
-            printf "# Copyright (C) $INITIAL_COPYRIGHT_YEAR-$YEAR The LineageOS Project\n" >> $1
+            printf "# Copyright (C) $INITIAL_COPYRIGHT_YEAR-$YEAR ViperOS Project\n" >> $1
         fi
     else
-        printf "# Copyright (C) $YEAR The LineageOS Project\n" > $1
+        printf "# Copyright (C) $YEAR ViperOS Project\n" > $1
     fi
 
     cat << EOF >> $1
@@ -779,12 +779,12 @@ function oat2dex() {
     local HOST="$(uname)"
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$LINEAGE_ROOT"/vendor/lineage/build/tools/smali/baksmali.jar
-        export SMALIJAR="$LINEAGE_ROOT"/vendor/lineage/build/tools/smali/smali.jar
+        export BAKSMALIJAR="$LINEAGE_ROOT"/vendor/viper/build/tools/smali/baksmali.jar
+        export SMALIJAR="$LINEAGE_ROOT"/vendor/viper/build/tools/smali/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$LINEAGE_ROOT"/vendor/lineage/build/tools/"$HOST"/vdexExtractor
+        export VDEXEXTRACTOR="$LINEAGE_ROOT"/vendor/viper/build/tools/"$HOST"/vdexExtractor
     fi
 
     # Extract existing boot.oats to the temp folder
@@ -950,7 +950,7 @@ function extract() {
             # If OTA is block based, extract it.
             elif [ -a "$DUMPDIR"/system.new.dat ]; then
                 echo "Converting system.new.dat to system.img"
-                python "$LINEAGE_ROOT"/vendor/lineage/build/tools/sdat2img.py "$DUMPDIR"/system.transfer.list "$DUMPDIR"/system.new.dat "$DUMPDIR"/system.img 2>&1
+                python "$LINEAGE_ROOT"/vendor/viper/build/tools/sdat2img.py "$DUMPDIR"/system.transfer.list "$DUMPDIR"/system.new.dat "$DUMPDIR"/system.img 2>&1
                 rm -rf "$DUMPDIR"/system.new.dat "$DUMPDIR"/system
                 mkdir "$DUMPDIR"/system "$DUMPDIR"/tmp
                 echo "Requesting sudo access to mount the system.img"
@@ -1036,7 +1036,7 @@ function extract() {
             printf '    + (keeping pinned file with hash %s)\n' "$HASH"
         else
             FOUND=false
-            # Try Lineage target first.
+            # Try Viper target first.
             # Also try to search for files stripped of
             # the "/system" prefix, if we're actually extracting
             # from a system image.

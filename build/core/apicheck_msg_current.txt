@@ -142,6 +142,6 @@ To make these errors go away, you have two choices:
                                       ,;+++++++++++++++++++++++++++++++++++++++++++++++++++++++:.
                                                 ..,;;+++++++++++++++++++++++++++++;:,.
 
-      To submit the revised current.txt to the main LineageOS repository,
+      To submit the revised current.txt to the main ViperOS repository,
       you will need approval.
 ******************************
