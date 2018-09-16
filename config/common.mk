@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
     vendor/viper/config/permissions/org.lineageos.android.xml:system/etc/permissions/org.lineageos.android.xml \
     vendor/viper/config/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml
 
+# Fix Dialer
+PRODUCT_COPY_FILES +=  \
+    vendor/viper/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
 # Include Lineage audio files
 include vendor/viper/config/lineage_audio.mk
 
@@ -136,6 +140,14 @@ PRODUCT_PACKAGES += \
     LockClock \
     WallpaperPicker \
     WeatherProvider
+
+# ViperOS Packages
+PRODUCT_PACKAGES += \
+    GContacts \
+    GDeskClock \
+    GDialer \
+    GMessaging \
+    Lawnchair
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -208,6 +220,9 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
