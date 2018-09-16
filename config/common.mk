@@ -103,6 +103,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/viper/config/permissions/lineage-hiddenapi-package-whitelist.xml:system/etc/permissions/lineage-hiddenapi-package-whitelist.xml
 
+# Fix Dialer
+PRODUCT_COPY_FILES +=  \
+    vendor/viper/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
 # Include Lineage audio files
 include vendor/viper/config/lineage_audio.mk
 
@@ -144,10 +148,16 @@ PRODUCT_PACKAGES += \
     LineageSettingsProvider \
     ExactCalculator \
     LockClock \
-    TrebuchetQuickStep \
-    Updater \
     WallpaperPicker \
     WeatherProvider
+
+# ViperOS Packages
+PRODUCT_PACKAGES += \
+    GContacts \
+    GDeskClock \
+    GDialer \
+    GMessaging \
+    Lawnchair
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -205,6 +215,9 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
