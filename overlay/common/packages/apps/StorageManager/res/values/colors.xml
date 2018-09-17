@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 The Android Open Source Project
+<!-- Copyright (C) 2016 The Pure Nexus Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,5 +15,11 @@
 -->
 
 <resources>
-    <bool name="show_documents_root">true</bool>
+    <color name="primary_color">#ff2d2d2d</color>
+    <color name="primary_dark_color">@color/material_blue_grey_950</color>
+    <color name="secondary_color">#ff3a3a3a</color>
+    <color name="accent_color">@color/material_blue_500</color>
+    <color name="accent_color_lighter">@color/material_blue_400</color>
+    <color name="material_blue_400">#ff5e97f6</color>
+    <color name="material_blue_500">#ff4285f4</color>
 </resources>
