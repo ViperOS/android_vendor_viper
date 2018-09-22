@@ -168,6 +168,10 @@ PRODUCT_PACKAGES += \
     LineageRedAccent \
     LineageYellowAccent
 
+# Fonts
+PRODUCT_PACKAGES += \
+    VPFonts
+
 # Extra tools in Viper
 PRODUCT_PACKAGES += \
     7z \
