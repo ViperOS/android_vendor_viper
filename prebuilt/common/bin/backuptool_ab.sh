@@ -5,7 +5,7 @@
 
 export S=/system
 export C=/postinstall/tmp/backupdir
-export V=15.1
+export V=8.1.0
 
 export ADDOND_VERSION=2
 
@@ -49,10 +49,8 @@ check_prereq() {
 if [ ! -r /system/build.prop ]; then
     return 0
 fi
-
-grep -q "^ro.viper.version=$V.*" /system/build.prop && return 1
-
-echo "Not backing up files from incompatible version: $V"
+#grep -q "^ro.viper.version=$V.*" /system/build.prop && return 1
+#echo "Not backing up files from incompatible version: $V"
 return 0
 }
 

@@ -5,7 +5,7 @@
 
 export C=/tmp/backupdir
 export S=/system
-export V=15.1
+export V=8.1.0
 
 export ADDOND_VERSION=1
 
@@ -33,6 +33,19 @@ preserve_addon_d() {
   fi
 }
 
+# Proceed only if /system is the expected ViperOS version
+check_prereq() {
+# If there is no build.prop file the partition is probably empty.
+if [ ! -r /system/build.prop ]; then
+    return 0
+fi
+#if ( ! grep -q "^ro.viper.version=$V.*" /system/build.prop ); then
+#  echo "Not backing up files from incompatible version: $V"
+#  return 0
+#fi
+return 1
+}
+
 # Restore /system/addon.d from /tmp/addon.d
 restore_addon_d() {
   if [ -d /tmp/addon.d/ ]; then
@@ -40,19 +53,6 @@ restore_addon_d() {
     cp -a /tmp/addon.d/* /system/addon.d/
     rm -rf /tmp/addon.d/
   fi
-}
-
-# Proceed only if /system is the expected major and minor version
-check_prereq() {
-# If there is no build.prop file the partition is probably empty.
-if [ ! -r /system/build.prop ]; then
-    return 0
-fi
-if ! grep -q "^ro.viper.version=$V.*" /system/build.prop; then
-  echo "Not backing up files from incompatible version: $V"
-  return 0
-fi
-return 1
 }
 
 check_blacklist() {

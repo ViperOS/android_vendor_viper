@@ -14,7 +14,7 @@
 
 # Versioning System
 # ViperOS Version.
-VIPER_VERSION_NUMBER := v4.0
+VIPER_VERSION_NUMBER := v5.0
 
 VIPER_DEVICE := $(VIPER_BUILD)
 
