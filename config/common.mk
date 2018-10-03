@@ -147,7 +147,8 @@ PRODUCT_PACKAGES += \
     GDeskClock \
     GDialer \
     GMessaging \
-    Lawnchair
+    Lawnchair \
+    OmniJaws
 
 # Exchange support
 PRODUCT_PACKAGES += \
