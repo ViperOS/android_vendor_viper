@@ -27,6 +27,7 @@ endif
 
 ifeq ($(VIPER_BUILD_TYPE), OFFICIAL)
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.viper.ota.version=$(VIPER_VERSION) \
     ro.ota.build.date=$(shell date +%Y%m%d)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.viper.buildtype=official
