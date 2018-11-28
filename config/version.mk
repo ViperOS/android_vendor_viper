@@ -14,13 +14,13 @@
 
 # Versioning System
 # ViperOS Version.
-VIPER_VERSION_NUMBER := v5.0
+VIPER_VERSION_NUMBER := v5.1
 
 VIPER_DEVICE := $(VIPER_BUILD)
 
 ifndef VIPER_BUILD_TYPE
     VIPER_BUILD_TYPE := UNOFFICIAL
-    
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.viper.buildtype=unofficial
 endif
