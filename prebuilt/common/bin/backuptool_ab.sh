@@ -5,7 +5,7 @@
 
 export S=/system
 export C=/postinstall/tmp/backupdir
-export V=16.0
+export V=9
 
 export ADDOND_VERSION=2
 
@@ -50,9 +50,8 @@ if [ ! -r /system/build.prop ]; then
     return 0
 fi
 
-grep -q "^ro.lineage.version=$V.*" /system/build.prop && return 1
-
-echo "Not backing up files from incompatible version: $V"
+#grep -q "^ro.viper.version=$V.*" /system/build.prop && return 1
+#echo "Not backing up files from incompatible version: $V"
 return 0
 }
 
