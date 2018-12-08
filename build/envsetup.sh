@@ -1,16 +1,16 @@
 function __print_lineage_functions_help() {
 cat <<EOF
-Additional LineageOS functions:
+Additional ViperOS functions:
 - cout:            Changes directory to out.
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
-- lineagegerrit:   A Git wrapper that fetches/pushes patch from/to LineageOS Gerrit Review.
+- lineagegerrit:   A Git wrapper that fetches/pushes patch from/to ViperOS Gerrit Review.
 - lineagerebase:   Rebase a Gerrit change and push it again.
-- lineageremote:   Add git remote for LineageOS Gerrit Review.
+- lineageremote:   Add git remote for ViperOS Gerrit Review.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
-- githubremote:    Add git remote for LineageOS Github.
+- githubremote:    Add git remote for ViperOS Github.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
@@ -71,7 +71,7 @@ function breakfast()
     LINEAGE_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-    for f in `/bin/ls vendor/lineage/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/viper/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -281,7 +281,7 @@ function lineageremote()
     if [ $LINEAGE = "false" ]
     then
         local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
-        local PFX="LineageOS/"
+        local PFX="ViperOS/"
     else
         local PROJECT=$REMOTE
     fi
@@ -361,7 +361,7 @@ function githubremote()
 
     local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
 
-    git remote add github https://github.com/LineageOS/$PROJECT
+    git remote add github https://github.com/ViperOS/$PROJECT
     echo "Remote 'github' created"
 }
 
@@ -722,7 +722,7 @@ function lineagerebase() {
     local dir="$(gettop)/$repo"
 
     if [ -z $repo ] || [ -z $refs ]; then
-        echo "LineageOS Gerrit Rebase Usage: "
+        echo "ViperOS Gerrit Rebase Usage: "
         echo "      lineagerebase <path to project> <patch IDs on Gerrit>"
         echo "      The patch IDs appear on the Gerrit commands that are offered."
         echo "      They consist on a series of numbers and slashes, after the text"
@@ -960,7 +960,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/lineage/build/tools/repopick.py $@
+    $T/vendor/viper/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
@@ -991,7 +991,7 @@ if [ -d $(gettop)/prebuilts/snapdragon-llvm/toolchains ]; then
             export SDCLANG=true
             export SDCLANG_PATH=$(gettop)/prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_4.0/prebuilt/linux-x86_64/bin
             export SDCLANG_PATH_2=$(gettop)/prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_4.0/prebuilt/linux-x86_64/bin
-            export SDCLANG_LTO_DEFS=$(gettop)/vendor/lineage/build/core/sdllvm-lto-defs.mk
+            export SDCLANG_LTO_DEFS=$(gettop)/vendor/viper/build/core/sdllvm-lto-defs.mk
             ;;
     esac
 fi

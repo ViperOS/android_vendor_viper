@@ -26,12 +26,12 @@ for part_cnt in 0 1 2 3 4
 do
     mkdir -p $ANDROID_PRODUCT_OUT/obj/BOOTANIMATION/bootanimation/part$part_cnt
 done
-tar xfp "vendor/lineage/bootanimation/bootanimation.tar" -C "$OUT/bootanimation/"
-mogrify -resize $RESOLUTION -colors 250 "$OUT/bootanimation/"*"/"*".png"
+tar xfp "vendor/viper/bootanimation/bootanimation.tar" -C "$OUT/bootanimation/"
+mogrify -resize $RESOLUTION -colors 250 "$OUT/bootanimation/"*"/"*".jpg"
 
 # Create desc.txt
-echo "$IMAGESCALEWIDTH $IMAGESCALEHEIGHT" 60 > "$OUT/bootanimation/desc.txt"
-cat "vendor/lineage/bootanimation/desc.txt" >> "$OUT/bootanimation/desc.txt"
+echo "$IMAGESCALEWIDTH $IMAGESCALEHEIGHT" 30 > "$OUT/bootanimation/desc.txt"
+cat "vendor/viper/bootanimation/desc.txt" >> "$OUT/bootanimation/desc.txt"
 
 # Create bootanimation.zip
 cd "$OUT/bootanimation"
