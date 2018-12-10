@@ -105,7 +105,8 @@ PRODUCT_COPY_FILES += \
 
 # Fix Dialer
 PRODUCT_COPY_FILES +=  \
-    vendor/viper/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+    vendor/viper/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml \
+    vendor/viper/prebuilt/common/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
 # Include Lineage audio files
 include vendor/viper/config/lineage_audio.mk
@@ -157,7 +158,8 @@ PRODUCT_PACKAGES += \
     GDeskClock \
     GDialer \
     GMessaging \
-    Lawnchair
+    Lawnchair \
+    Turbo
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -254,3 +256,7 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/viper/config/partner_gms.mk
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/viper/prebuilt/common/permissions/turbo.xml:system/etc/permissions/turbo.xml
