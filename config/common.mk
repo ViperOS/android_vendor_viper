@@ -254,6 +254,8 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 -include vendor/viper/config/version.mk
 
+include vendor/themes/common.mk
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/viper/config/partner_gms.mk
 
