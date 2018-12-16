@@ -108,6 +108,11 @@ PRODUCT_COPY_FILES +=  \
     vendor/viper/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml \
     vendor/viper/prebuilt/common/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
+# Weather Client
+PRODUCT_COPY_FILES += \
+    vendor/viper/config/permissions/com.viper.weather.client.xml:system/etc/permissions/com.viper.weather.client.xml \
+    vendor/viper/config/default-permissions/com.viper.weather.client.xml:system/etc/default-permissions/com.viper.weather.client.xml
+
 # Include Lineage audio files
 include vendor/viper/config/lineage_audio.mk
 
@@ -159,7 +164,8 @@ PRODUCT_PACKAGES += \
     GDialer \
     GMessaging \
     Lawnchair \
-    Turbo
+    Turbo \
+    WeatherClient
 
 # Exchange support
 PRODUCT_PACKAGES += \
