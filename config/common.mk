@@ -163,7 +163,7 @@ PRODUCT_PACKAGES += \
     GDeskClock \
     GDialer \
     GMessaging \
-    Lawnchair \
+    Launcher3QuickStep \
     Turbo \
     WeatherClient
 
