@@ -109,6 +109,10 @@ PRODUCT_COPY_FILES += \
     vendor/viper/config/permissions/com.viper.weather.client.xml:system/etc/permissions/com.viper.weather.client.xml \
     vendor/viper/config/default-permissions/com.viper.weather.client.xml:system/etc/default-permissions/com.viper.weather.client.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/viper/config/permissions/lineage-power-whitelist.xml:system/etc/sysconfig/lineage-power-whitelist.xml
+
 # Include Lineage audio files
 include vendor/viper/config/lineage_audio.mk
 
