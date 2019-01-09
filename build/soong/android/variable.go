@@ -6,18 +6,18 @@ type Product_variables struct {
 	Apply_msm8974_1440p_egl_workaround struct {
 		Cflags []string
 	}
-	Device_legacy_hwfde struct {
+	Supports_legacy_hw_fde struct {
 		Cflags []string
 	}
-	Device_skip_waiting_for_qsee struct {
+	Should_skip_waiting_for_qsee struct {
 		Cflags []string
 	}
-	Device_support_hwfde struct {
+	Supports_hw_fde struct {
 		Cflags []string
 		Header_libs []string
 		Shared_libs []string
 	}
-	Device_support_hwfde_perf struct {
+	Supports_hw_fde_perf struct {
 		Cflags []string
 	}
 	Has_legacy_camera_hal1 struct {
@@ -47,10 +47,10 @@ type Product_variables struct {
 type ProductVariables struct {
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
-	Device_legacy_hwfde  *bool `json:",omitempty"`
-	Device_skip_waiting_for_qsee  *bool `json:",omitempty"`
-	Device_support_hwfde  *bool `json:",omitempty"`
-	Device_support_hwfde_perf  *bool `json:",omitempty"`
+	Supports_legacy_hw_fde  *bool `json:",omitempty"`
+	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
+	Supports_hw_fde  *bool `json:",omitempty"`
+	Supports_hw_fde_perf  *bool `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
