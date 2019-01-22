@@ -14,15 +14,15 @@
 
 # Versioning System
 # ViperOS Version.
-VIPER_VERSION_NUMBER := v6.0
-VIPER_BUILD_DATE := $(shell date +%Y%m%d)
+VIPER_VERSION_NUMBER := v6.1
+VIPER_BUILD_DATE := $(shell date -u +%d-%m-%Y)
 VIPER_DEVICE := $(VIPER_BUILD)
 
 ifndef VIPER_BUILD_TYPE
     VIPER_BUILD_TYPE := UNOFFICIAL
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.viper.buildtype=unofficial
+    ro.viper.buildtype=UNOFFICIAL
 endif
 
 ifeq ($(VIPER_BUILD_TYPE), OFFICIAL)
@@ -30,7 +30,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.viper.ota.version=$(VIPER_VERSION) \
     ro.ota.build.date=$(shell date +%Y%m%d)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.viper.buildtype=official
+    ro.viper.buildtype=OFFICIAL
 endif
 
 # Set all versions
