@@ -15,6 +15,7 @@
 # Versioning System
 # ViperOS Version.
 VIPER_VERSION_NUMBER := v6.1
+VIPER_VERSION_P := 6.1
 VIPER_BUILD_DATE := $(shell date -u +%d-%m-%Y)
 VIPER_DEVICE := $(VIPER_BUILD)
 
@@ -40,6 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     viper.ota.version=$(VIPER_VERSION) \
     ro.modversion=$(VIPER_VERSION_NUMBER) \
+    ro.vipermodversion=$(VIPER_VERSION_P) \
     ro.viper.version=$(VIPER_VERSION) \
     ro.viper.build_date=$(VIPER_BUILD_DATE) \
     ro.viper.device=$(VIPER_DEVICE)
