@@ -22,16 +22,13 @@ VIPER_DEVICE := $(VIPER_BUILD)
 ifndef VIPER_BUILD_TYPE
     VIPER_BUILD_TYPE := UNOFFICIAL
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.viper.buildtype=UNOFFICIAL
 endif
 
 ifeq ($(VIPER_BUILD_TYPE), OFFICIAL)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.viper.ota.version=$(VIPER_VERSION) \
-    ro.ota.build.date=$(shell date +%Y%m%d)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.viper.buildtype=OFFICIAL
+
+PRODUCT_PACKAGES += \
+    Updater
+
 endif
 
 # Set all versions
@@ -39,6 +36,7 @@ VIPER_VERSION := Viper-$(VIPER_DEVICE)-$(shell date +"%Y%m%d")-$(VIPER_VERSION_N
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
+    ro.viper.buildtype=$(VIPER_BUILD_TYPE) \
     viper.ota.version=$(VIPER_VERSION) \
     ro.modversion=$(VIPER_VERSION_NUMBER) \
     ro.vipermodversion=$(VIPER_VERSION_P) \
