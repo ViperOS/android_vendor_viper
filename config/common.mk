@@ -37,6 +37,10 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+# init file
+PRODUCT_COPY_FILES += \
+    vendor/viper/prebuilt/common/etc/init.local.rc:system/etc/init/init.viper.rc
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/viper/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
