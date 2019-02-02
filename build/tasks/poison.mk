@@ -23,6 +23,7 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 poison: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(VIPER_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(VIPER_TARGET_PACKAGE) > $(VIPER_TARGET_PACKAGE).md5sum
+	$(hide) ./vendor/viper/tools/generate_json_build_info.sh $(VIPER_TARGET_PACKAGE)
 	@echo -e ${CL_CYN}""${CL_CYN}
 	@echo -e ${CL_CYN}" ██▒   █▓ ██▓ ██▓███  ▓█████  ██▀███   ▒█████    ██████     ██▓███   ██▀███   ▒█████   ▄▄▄██▀▀▀▓█████  ▄████▄  ▄▄▄█████▓ "${CL_CYN}
 	@echo -e ${CL_CYN}"▓██░   █▒▓██▒▓██░  ██▒▓█   ▀ ▓██ ▒ ██▒▒██▒  ██▒▒██    ▒    ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒   ▒██   ▓█   ▀ ▒██▀ ▀█  ▓  ██▒ ▓▒ "${CL_CYN}
