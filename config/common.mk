@@ -165,9 +165,12 @@ PRODUCT_PACKAGES += \
     GDeskClock \
     GDialer \
     GMessaging \
+    GCalculator \
     Launcher3QuickStep \
     Turbo \
-    WeatherClient
+    WeatherClient \
+    VPapers \
+    AmbientSensePrebuilt
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -270,3 +273,7 @@ include vendor/themes/common.mk
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/viper/prebuilt/common/permissions/turbo.xml:system/etc/permissions/turbo.xml
+
+# Ambient, Google app and Sound search tile - music recognition
+PRODUCT_COPY_FILES +=  \
+    vendor/viper/prebuilt/common/etc/ambient/matcher_tah.leveldb:system/etc/ambient/matcher_tah.leveldb
