@@ -14,8 +14,8 @@
 
 # Versioning System
 # ViperOS Version.
-VIPER_VERSION_NUMBER := v6.2
-VIPER_VERSION_P := 6.2
+VIPER_VERSION_NUMBER := v6.3
+VIPER_VERSION_P := 6.3
 VIPER_BUILD_DATE := $(shell date -u +%d-%m-%Y)
 VIPER_DEVICE := $(VIPER_BUILD)
 
