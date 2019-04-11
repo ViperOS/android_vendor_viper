@@ -110,6 +110,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/viper/config/permissions/lineage-power-whitelist.xml:system/etc/sysconfig/lineage-power-whitelist.xml
 
+# Include AOSP audio files
+include vendor/viper/config/aosp_audio.mk
+
 # Include Lineage audio files
 include vendor/viper/config/lineage_audio.mk
 
