@@ -2,7 +2,7 @@
 if [ "$1" ]
 then
   file_path=$1
-  datetime=$(date +%s)
+  datetime=$(bash -c "cut -d'=' -f2 <<< $(grep 'ro.build.date.utc' $(dirname $file_path)/system/build.prop)")
   filename=$(basename "$file_path")
   if [ -f $file_path ]; then
     size=$(stat --printf="%s" "$file_path")
