@@ -90,7 +90,8 @@ PRODUCT_COPY_FILES += \
 # This is Lineage!
 PRODUCT_COPY_FILES += \
     vendor/viper/config/permissions/org.lineageos.android.xml:system/etc/permissions/org.lineageos.android.xml \
-    vendor/viper/config/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml
+    vendor/viper/config/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml \
+    vendor/viper/config/permissions/privapp-permissions-cm-legacy.xml:system/etc/permissions/privapp-permissions-cm-legacy.xml
 
 # Hidden API whitelist
 PRODUCT_COPY_FILES += \
