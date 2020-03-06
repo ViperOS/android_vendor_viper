@@ -272,7 +272,7 @@ function lineageremote()
     if [ $LINEAGE = "false" ]
     then
         local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
-        local PFX="LineageOS/"
+        local PFX="ViperOS/"
     else
         local PROJECT=$REMOTE
     fi
@@ -953,7 +953,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/lineage/build/tools/repopick.py $@
+    $T/vendor/viper/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {

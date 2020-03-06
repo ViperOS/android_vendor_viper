@@ -52,7 +52,7 @@ except:
     device = product
 
 if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from LineageOS Github (http://github.com/LineageOS)." % device)
+    print("Device %s not found. Attempting to retrieve device repository from ViperOS Github (http://github.com/Viper-Devices)." % device)
 
 repositories = []
 
@@ -299,4 +299,4 @@ else:
             print("Done")
             sys.exit()
 
-print("Repository for %s not found in the LineageOS Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)
+print("Repository for %s not found in the ViperOS Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)

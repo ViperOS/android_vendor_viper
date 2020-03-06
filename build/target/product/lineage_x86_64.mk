@@ -14,6 +14,6 @@
 
 $(call inherit-product, build/target/product/aosp_x86_64.mk)
 
-include vendor/lineage/build/target/product/lineage_generic_target.mk
+include vendor/viper/build/target/product/lineage_generic_target.mk
 
 PRODUCT_NAME := lineage_x86_64
