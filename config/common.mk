@@ -143,7 +143,7 @@ PRODUCT_PACKAGES += \
     LineageBlackTheme \
     LineageDarkTheme \
     LineageBlackAccent \
-    LineageBlueAccent \
+#    LineageBlueAccent \
     LineageBrownAccent \
     LineageCyanAccent \
     LineageGreenAccent \
