@@ -122,7 +122,8 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_PACKAGES += \
     ExactCalculator \
     Exchange2 \
-    Terminal
+    Terminal \
+    Launcher3
 
 # Lineage packages
 PRODUCT_PACKAGES += \
